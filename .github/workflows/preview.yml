@@ -21,7 +21,5 @@ jobs:
         run: vercel build --token=${{ secrets.VERCEL_TOKEN }}
       - name: Deploy preview and assign custom domain
         run: |
-          du --inodes -d 5 .vercel/output
-          ls -l .vercel/output/functions
           vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }} > domain.txt
           vercel alias --token ${{ secrets.VERCEL_TOKEN }} set `cat domain.txt` ftp-games-preview.vercel.app
