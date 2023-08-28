@@ -1,6 +1,6 @@
 import React from "react";
 import { HeaderProps } from './Header.props';
-import logo from '../../../assets/logos/ftp-logo.png'
+import logo from '../../../assets/logos/ftp-logo.png';
 import {
   Box,
   Container,
@@ -23,8 +23,8 @@ function Header({ className, children, ...props }: HeaderProps): JSX.Element {
             boxSize="3.5rem"
             objectFit="cover"
           />
-          <Flex as="nav"  gap="2.5rem">
-            <UnorderedList styleType="none" display="flex" alignItems="center" justifyContent="space-between"  gap="2.5rem">
+          <Flex as="nav" gap="2.5rem">
+            <UnorderedList styleType="none" display="flex" alignItems="center" justifyContent="space-between" gap="2.5rem">
               <ListItem>
                 <Link href="#">
                   Free Games
@@ -52,10 +52,10 @@ function Header({ className, children, ...props }: HeaderProps): JSX.Element {
               bg="white"
               color="black"
               _hover={{
-                bg: "purple.100"
+                bg: "blue.200"
               }}
               _active={{
-                bg: 'purple.200',
+                bg: "blue.200",
                 transform: 'scale(0.98)',
               }}
             >Join Free</Button>
