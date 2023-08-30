@@ -1,4 +1,3 @@
-import React from "react";
 import { HeaderProps } from './Header.props';
 import logo from '../../../assets/logos/ftp-logo.png';
 import {

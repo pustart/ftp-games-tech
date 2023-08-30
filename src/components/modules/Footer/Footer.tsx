@@ -1,4 +1,3 @@
-import React from "react";
 import logo from '../../../assets/logos/ftp-logo.png';
 import twiIcon from '../../../assets/icons/twitter-icon.svg';
 import fbIcon from '../../../assets/icons/facebook-icon.svg';
@@ -8,7 +7,6 @@ import {
   Container,
   Flex,
   Image,
-  Button,
   ListItem,
   UnorderedList,
   Link,
