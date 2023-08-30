@@ -122,7 +122,7 @@ function GameList(): JSX.Element {
           mb="6rem"
           fontSize="1.25rem"
           transition="all 0.2s ease"
-          _hover={{ color: "purple.100"}}
+          _hover={{ color: "purple.200"}}
           >
             Load More
           </Button>
