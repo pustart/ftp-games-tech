@@ -14,7 +14,7 @@ function DefaultLayout({ children, fancyBackground }: DefaultLayoutProps): JSX.E
         fancyBackground ? (<>
         </>) : null
       }
-      <Header/>
+      {/* <Header/> */}
       <div>{children}</div>
       <Footer/>
     </div>

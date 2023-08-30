@@ -22,8 +22,8 @@ import GameCard from '../../elements/GameCard/GameCard';
 
 function GameList(): JSX.Element {
   const filterIcon: JSX.Element = <Icon
-    w="2.125rem"
-    h="1.875rem"
+    w="60%"
+    h="60%"
     viewBox='0 0 34 20'
     color='inherit'
   >
@@ -34,8 +34,8 @@ function GameList(): JSX.Element {
   </Icon>;
 
   const sortIcon: JSX.Element = <Icon
-    w="2.25rem"
-    h="1.7rem"
+    w="60%"
+    h="60%"
     viewBox='0 0 36 28'
     color='inherit'
   >
@@ -48,11 +48,12 @@ function GameList(): JSX.Element {
   return (
     <Box as="main" w="100vw">
       <Container px="1rem" maxW="desktopMax">
-        <Flex justifyContent="space-between" alignItems="flex-end" h="6.24rem">
+        <Flex justifyContent="space-between" alignItems="flex-end" h={{ base: "4.75rem", md: "6.24rem"}}>
           <Menu>
             <MenuButton
-              w="3.375rem"
-              h="3.375rem"
+              w={{ base: "2.25rem", md: "3.375rem" }}
+              h={{ base: "2.25rem", md: "3.375rem" }}
+              minW="2.25rem"
               color="white"
               as={IconButton}
               icon={filterIcon}
@@ -72,17 +73,17 @@ function GameList(): JSX.Element {
           </Menu>
 
           <Box>
-            <Heading as="h2" textAlign="center">
-              <Text as="span" bg="gradient.blue" backgroundClip="text" fontSize="2rem">Personalized</Text>
-              <br />
-              <Text as="span">Recommendations</Text>
+            <Heading as="h2" textAlign="center" display="flex" flexDirection="column">
+              <Text as="span" bg="gradient.blue" backgroundClip="text" fontSize={{base: "1.25rem", md: "2rem"}}>Personalized</Text>
+              <Text as="span" fontSize={{ base: "1.5rem", md: "2.25rem" }}>Recommendations</Text>
             </Heading>
           </Box>
 
           <Menu>
             <MenuButton
-              w="3.375rem"
-              h="3.375rem"
+              w={{ base: "2.25rem", md: "3.375rem" }}
+              h={{ base: "2.25rem", md: "3.375rem" }}
+              minW="2.25rem"
               color="white"
               as={IconButton}
               icon={sortIcon}
@@ -119,7 +120,7 @@ function GameList(): JSX.Element {
           rightIcon={<ArrowForwardIcon />}
           colorScheme='white'
           variant='ghost'
-          mb="6rem"
+          mb={{base: "3.5rem", md: "6rem"}}
           fontSize="1.25rem"
           transition="all 0.2s ease"
           _hover={{ color: "purple.200"}}

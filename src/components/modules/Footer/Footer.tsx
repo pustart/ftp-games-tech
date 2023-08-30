@@ -17,10 +17,10 @@ import {
 
 function Footer(): JSX.Element {
   return (
-    <Box as="footer" w="100vw" h="16rem" bg="gray.800" py={16}>
+    <Box as="footer" w="100vw" minH="16rem" bg="gray.800" py={{ base: "2rem", md: "4rem" }}>
       <Container maxW="desktopMax">
-        <Flex alignItems="flex-start" justifyContent="space-between">
-          <Flex flexDirection="column" justifyContent="flex-start" gap={8}>
+        <Flex flexDirection={{ base: "column", md: "row" }} alignItems={{ base: "center", md: "flex-start" }} justifyContent="space-between">
+          <Flex flexDirection="column" mb={{ base: "2rem", md: "0" }} alignItems={{base: "center", md: "flex-start"}} justifyContent={{base: "center", md: "flex-start"}} gap={8}>
             <Image
               src={logo}
               alt="Free-To-Play Games logotype."
@@ -32,6 +32,7 @@ function Footer(): JSX.Element {
                 <ListItem>
                   <LinkBox>
                     <Image
+                      alignSelf="center"
                       src={twiIcon}
                       alt="Twitter icon."
                       boxSize="1.25rem"
@@ -63,7 +64,7 @@ function Footer(): JSX.Element {
             </Flex>
           </Flex>
 
-          <Flex alignItems="flex-start" justifyContent="space-between" gap="6rem">
+          <Flex flexDirection={{ base: "column", md: "row" }} alignSelf="start" alignItems="flex-start" justifyContent="space-between" gap={{base: "2rem", md: "6rem"}}>
             <Box as="nav">
               <Heading as="h3" size="sm" mb="1rem">Information</Heading>
 
