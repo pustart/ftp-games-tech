@@ -34,6 +34,11 @@ const colors = {
       500: "rgba(255, 255, 255, 0.20)",
       600: "rgba(255, 255, 255, 0.08)",
     },
+    gradient: {
+      blue: "linear-gradient(219deg, #3385FF 9.81%, #91B7F0 76.17%, #95BBF2 93.64%)",
+      purple: "linear-gradient(5deg, #805AA8 0%, #BAA2D4 50%, #805AA8 100%)",
+      green: "linear-gradient(162deg, #410AB6 30.17%, #5BFF40 100%)",
+    }
 };
 
 const styles = {
