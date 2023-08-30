@@ -29,7 +29,7 @@ function Header(): JSX.Element {
           <Image
             src={logo}
             alt="Free-To-Play Games logotype."
-            boxSize={{ base: "2.9rem", md: "3.5rem" }}
+            boxSize="3.5rem"
             objectFit="cover"
           />
           <Flex as="nav" gap="2.5rem" display={{ base: "none", md: "flex" }}>
@@ -73,6 +73,7 @@ function Header(): JSX.Element {
           <IconButton
             display={{ base: "block", md: "none" }}
             onClick={onOpen}
+            mr="-0.5rem"
             colorScheme='white'
             aria-label='Open hamburger menu'
             icon={<HamburgerIcon w="1.75rem" h="1.75rem" />}
