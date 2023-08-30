@@ -21,21 +21,21 @@ function Banner(): JSX.Element {
 
   return (
     <Container pt="3.75rem" maxW="desktopMax" mb="2rem">
-      <Flex mb="6rem" justifyContent="space-between">
-        <Box maxW="38.5rem">
-          <Heading as="h1" fontSize="4rem">Discover the best free-to-play games!</Heading>
-          <Text as="p" fontSize="lg" my="2rem">
-            Track what you've played and search for what to play next!<br/>
+      <Flex mb={{ base: "4rem", md: "6rem"}} justifyContent="space-between">
+        <Box maxW={{ base: "100%", md: "38.5rem"}}>
+          <Heading as="h1" fontSize={{ base: "3rem", md: "4rem" }}>Discover the best free-to-play games!</Heading>
+          <Text as="p" fontSize="lg" my="2rem" lineHeight="2rem" maxW="30rem">
+            Track what you've played and search for what to play next!
             Plus get free premium loot!
           </Text>
 
-          <Flex w="100%" maxW="39rem" gap="1rem">
+          <Flex w="100%" maxW={{ base: "100%", md: "39rem" }} gap="1rem" flexDirection={{ base: "column", md: "row" }} justifyContent="stretch">
             <Button
               leftIcon={lightningIcon}
               py="1rem"
               h="3.5rem"
+              flexGrow="1"
               fontSize="1.25rem"
-              flex="1"
               variant='solid'
               colorScheme="white"
               bg="white"
@@ -55,7 +55,7 @@ function Banner(): JSX.Element {
             <Button
               h="3.5rem"
               fontSize="1.25rem"
-              flex="1"
+              flexGrow="1"
               variant='outline'
               colorScheme="white"
               color="white"
@@ -74,14 +74,18 @@ function Banner(): JSX.Element {
           </Flex>
         </Box>
 
-        <Box as="aside">
+        <Box as="aside" display={{ base: "none", md: "block" }}>
           <Image
             src={illustration}
+            alt="Banner illustration."
           />
         </Box>
       </Flex>
 
-      <Image src={decorativeGrid}/>
+      <Image
+        src={decorativeGrid}
+        alt="Decorative grid image."
+      />
     </Container>
   );
 }
