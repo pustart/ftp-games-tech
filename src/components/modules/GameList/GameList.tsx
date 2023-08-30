@@ -17,6 +17,8 @@ import {
   MenuDivider,
   IconButton,
 } from '@chakra-ui/react';
+import { ArrowForwardIcon } from '@chakra-ui/icons';
+import GameCard from '../../elements/GameCard/GameCard';
 
 function GameList(): JSX.Element {
   const filterIcon: JSX.Element = <Icon
@@ -98,13 +100,32 @@ function GameList(): JSX.Element {
             />
             <MenuList color="black">
               <MenuOptionGroup title='Sort by' type='radio'>
-                <MenuItemOption value='dateNew' _hover={{background: "blue.100",}}>Release Date - NEW</MenuItemOption>
-                <MenuItemOption value='dateOld' _hover={{background: "blue.100",}}>Release Date - OLD</MenuItemOption>
-                <MenuItemOption value='popularityMost' _hover={{background: "blue.100",}}>Popularity - MOST</MenuItemOption>
-                <MenuItemOption value='popularityLess' _hover={{background: "blue.100",}}>Popularity - LESS</MenuItemOption>
+                <MenuItemOption value='dateNew' _hover={{ background: "blue.100", }}>Release Date - NEW</MenuItemOption>
+                <MenuItemOption value='dateOld' _hover={{ background: "blue.100", }}>Release Date - OLD</MenuItemOption>
+                <MenuItemOption value='popularityMost' _hover={{ background: "blue.100", }}>Popularity - MOST</MenuItemOption>
+                <MenuItemOption value='popularityLess' _hover={{ background: "blue.100", }}>Popularity - LESS</MenuItemOption>
               </MenuOptionGroup>
             </MenuList>
           </Menu>
+        </Flex>
+
+        <GameCard></GameCard>
+        <GameCard></GameCard>
+        <GameCard></GameCard>
+        <GameCard></GameCard>
+
+        <Flex w="100%" justifyContent="center">
+          <Button
+          rightIcon={<ArrowForwardIcon />}
+          colorScheme='white'
+          variant='ghost'
+          mb="6rem"
+          fontSize="1.25rem"
+          transition="all 0.2s ease"
+          _hover={{ color: "purple.100"}}
+          >
+            Load More
+          </Button>
         </Flex>
       </Container>
     </Box>
