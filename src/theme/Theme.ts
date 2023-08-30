@@ -60,4 +60,13 @@ const fonts = {
   body: `'Inter Variable', sans-serif`,
 }
 
-export const THEME = extendTheme({ colors, styles, sizes, fonts });
+const breakpoints = {
+  base: "0px", // 0px
+  sm: "480px", // ~480px. em is a relative unit and is dependant on the font size.
+  md: "768px", // ~768px
+  lg: "992px", // ~992px
+  xl: "1280px", // ~1280px
+  "2xl": "1636px", // ~1536px
+};
+
+export const THEME = extendTheme({ colors, styles, sizes, fonts, breakpoints });
