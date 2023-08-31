@@ -15,7 +15,7 @@ import { ChevronRightIcon } from '@chakra-ui/icons';
 import stockImg from "../../../assets/images/stock.png";
 import styles from "./GameBanner.module.scss";
 
-function GameBanner() {
+function GameBanner(): JSX.Element {
   const lightningIcon: JSX.Element = <Icon viewBox='0 0 14 21' color='green.500'>
     <path
       fill='currentColor'
@@ -26,7 +26,7 @@ function GameBanner() {
   return (
     <Container as="article" p={{ base: "6rem 1rem 2rem 1rem", md: "3rem 0 3rem 3rem" }} maxW="desktopMax" mb="3.5rem" mx={{ base: "0", md: "1rem" }} mt={{ base: "-4.5rem", md: "0" }} borderRadius={{ base: "0", md: "1.5rem" }} bg="gradient.green">
       <Flex flexDirection={{base: "column", md: "row"}} justifyContent="space-between" alignItems="flex-start" gap="1rem">
-        <Box>
+        <Box as="section">
           <Breadcrumb spacing='0.3rem' mb={{ base: "0.5rem", md: "2.25rem" }} color="gray.100" separator={<ChevronRightIcon color='gray.500' />}>
             <BreadcrumbItem>
               <BreadcrumbLink href='#'>Home Page</BreadcrumbLink>
