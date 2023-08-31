@@ -27,6 +27,7 @@ function Header(): JSX.Element {
       <Container p={{base: "0.5rem 1rem", md: "1rem"}} maxW="desktopMax">
         <Flex alignItems="center" justifyContent="space-between">
           <Image
+            zIndex={{ base: "1", md: "0" }}
             src={logo}
             alt="Free-To-Play Games logotype."
             boxSize="3.5rem"

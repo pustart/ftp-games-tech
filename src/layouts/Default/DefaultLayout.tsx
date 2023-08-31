@@ -1,5 +1,4 @@
-import React, { FunctionComponent } from "react";
-import { Box } from '@chakra-ui/react';
+import { FunctionComponent } from "react";
 import Header from '../../components/modules/Header/Header';
 import Footer from '../../components/modules/Footer/Footer';
 import { DefaultLayoutProps } from './DefaultLayout.props';
